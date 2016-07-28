@@ -1,0 +1,738 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <VisualBrush x:Key="#">
+        <VisualBrush.Visual>
+    <Canvas Height="50" Width="50">
+        <Rectangle Width="50" Height="50" Fill="Transparent"/>
+        <Rectangle Canvas.Left="2" Canvas.Top="2" Height="46" Width="46" 
+                           RadiusX="4" RadiusY="4">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <RadialGradientBrush.GradientStops>
+                        <GradientStop Offset="0.93" Color="#f0e8b451"/>
+                        <GradientStop Offset="0.97" Color="#f0eab23e"/>
+                    </RadialGradientBrush.GradientStops>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Canvas.Left="3.5" Canvas.Top="2.5" Height="43.5" Width="43" RadiusX="3.5" RadiusY="3.5">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5, 1">
+                    <GradientStop Offset="0.0" Color="#d6d1af7b"/>
+                    <GradientStop Offset="0.05" Color="#d0ffffff"/>
+                    <GradientStop Offset="0.2" Color="#d0d1af7b"/>
+                    <GradientStop Offset="0.70" Color="#d0d1af7b"/>
+                    <GradientStop Offset="0.95" Color="#d0dfcf9f"/>
+                    <GradientStop Offset="0.99" Color="#d6d9b784"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="A">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">A</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="B">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >3</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">B</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="C">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >3</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">C</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="D">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >2</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">D</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="E">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">E</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="F">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >4</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">F</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="G">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >2</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">G</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="H">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >4</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">H</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="I">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">I</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="J">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >8</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">J</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="K">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >5</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">K</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="L">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">L</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="M">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >3</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">M</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="N">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">N</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="O">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">O</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="P">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >3</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">P</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="Q">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="6"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >10</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">Q</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="R">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">R</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="S">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">S</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="T">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">T</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="U">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >1</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">U</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="V">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >4</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">V</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="W">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >4</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">W</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="X">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >8</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">X</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="Y">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >4</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">Y</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="Z">
+        <VisualBrush.Visual>
+            <Grid>
+                <Rectangle Width="50" Height="50" Fill="{StaticResource #}">
+                </Rectangle>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="14"/>
+                        <ColumnDefinition Width="2"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="3"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"
+                               VerticalAlignment="Bottom" FontSize="11"
+                               FontFamily="Arial" >10</TextBlock>
+                    <TextBlock  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" 
+                               HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"
+                               VerticalAlignment="Center" FontFamily="Calibri">Z</TextBlock>
+                </Grid>
+            </Grid>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+
+</ResourceDictionary>

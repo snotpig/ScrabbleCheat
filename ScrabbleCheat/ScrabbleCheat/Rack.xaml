@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <LinearGradientBrush x:Key="outer" StartPoint="0.5,0" EndPoint="0.5,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.0" Color="#005030"/>
+            <GradientStop Offset="0.4" Color="#108030"/>
+            <GradientStop Offset="0.6" Color="#108030"/>
+            <GradientStop Offset="1.0" Color="#005030"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+
+    <VisualBrush x:Key="rack">
+        <VisualBrush.Visual>
+            <Canvas Width="360" Height="60">
+                <Rectangle Width="360" Height="55" RadiusX="6" RadiusY="6">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Offset="0.0" Color="#9ecca5"/>
+                                <GradientStop Offset="0.2" Color="#7eac95"/>
+                                <GradientStop Offset="1.0" Color="#3d986d"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Width="360" Height="7" RadiusX="0" RadiusY="0" Canvas.Top="53">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Offset="0.0" Color="#9ecca5"/>
+                                <GradientStop Offset="0.2" Color="#7eac95"/>
+                                <GradientStop Offset="1.0" Color="#3d986d"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+</ResourceDictionary>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="ScrabbleCheat.AboutBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AboutBox" Height="440" Width="690" WindowStyle="None" ResizeMode="NoResize"
+        AllowsTransparency="True" Background="Transparent">
+    <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Ellipse Name="disc" Width="0" Height="0" Canvas.Left="250" Canvas.Top="413" Fill="{StaticResource windowBackground}"
+                 Stroke="Olive" MouseDown="Ellipse_MouseDown"/>
+        <TextBox Name="txtProgram" Canvas.Left="277" Canvas.Top="210" Width="145" Height="30" Foreground="White" BorderThickness="0"
+                 Background="Transparent" FontSize="16" Visibility="Hidden" Focusable="False" IsTabStop="False" AllowDrop="False"
+                 IsUndoEnabled="False" IsReadOnly="True" TextAlignment="Center">Scrabble Cheat</TextBox>      
+        <TextBox Name="txtVersion" Canvas.Left="277" Canvas.Top="240" Width="145" Height="30" Foreground="White" BorderThickness="0"
+                 Background="Transparent" FontSize="16" Visibility="Hidden" Focusable="False" IsTabStop="False" AllowDrop="False"
+                 IsUndoEnabled="False" IsReadOnly="True" TextAlignment="Center">Version</TextBox>      
+        <TextBox Name="txtCopyright" Canvas.Left="277" Canvas.Top="270" Width="145" Height="30" Foreground="White" BorderThickness="0"
+                 Background="Transparent" FontSize="16" Visibility="Hidden" Focusable="False" IsTabStop="False" AllowDrop="False"
+                 IsUndoEnabled="False" IsReadOnly="True" TextAlignment="Center"></TextBox>
+    </Canvas>
+</Window>

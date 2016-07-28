@@ -1,0 +1,363 @@
+﻿<Window x:Class="ScrabbleCheat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:snot="clr-namespace:Snotsoft.Controls"
+        xmlns:local="clr-namespace:ScrabbleCheat"
+        xmlns:cm="clr-namespace:System.ComponentModel;assembly=System"
+        Height="440" Width="690" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
+        Background="{StaticResource windowBackground}" KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <cm:BackgroundWorker x:Key="backgroundWorker" 
+        WorkerReportsProgress="False" WorkerSupportsCancellation="False"
+        DoWork="backgroundWorker_DoWork"
+        RunWorkerCompleted="backgroundWorker_RunWorkerCompleted">
+        </cm:BackgroundWorker>
+    </Window.Resources>
+    <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Uniform">
+        <Grid Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="420"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="750"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="190"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+            <Rectangle Name="box" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="171" Grid.ColumnSpan="2" 
+                                                                                        Fill="{StaticResource outer}" StrokeThickness="3" ></Rectangle>
+            <Rectangle Name="rectRack" Grid.Row="1" Fill="{StaticResource rack}" Width="360" Height="60" HorizontalAlignment="Right" StrokeThickness="2"
+                       MouseLeftButtonUp="rectRack_MouseLeftButtonUp"/>
+            <Button Width="50" Height="50" Name="cmdStart" Grid.Column="1" Grid.Row="1"
+                    Style="{StaticResource roundButton}" Click="cmdStart_Click" Focusable="False">Go</Button>
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Name="txt0" Grid.Row="1" Grid.Column="1" MouseEnter="txt0_MouseEnter" 
+                           Style="{StaticResource lblWords}" MouseLeave="txt0_MouseLeave"/>
+                <Label Name="txt1" Grid.Row="2" Grid.Column="1" MouseEnter="txt1_MouseEnter"
+                           Style="{StaticResource lblWords}" MouseLeave="txt1_MouseLeave" />
+                <Label Name="txt2" Grid.Row="3" Grid.Column="1" MouseEnter="txt2_MouseEnter"
+                           Style="{StaticResource lblWords}" MouseLeave="txt2_MouseLeave"/>
+                <Label Name="txt3" Grid.Row="4" Grid.Column="1" MouseEnter="txt3_MouseEnter"
+                           Style="{StaticResource lblWords}" MouseLeave="txt3_MouseLeave"/>
+                <Label Name="txt4" Grid.Row="5" Grid.Column="1" MouseEnter="txt4_MouseEnter"
+                           Style="{StaticResource lblWords}" MouseLeave="txt4_MouseLeave"/>
+                <Label Name="txt5" Grid.Row="6" Grid.Column="1" MouseEnter="txt5_MouseEnter"
+                           Style="{StaticResource lblWords}" MouseLeave="txt5_MouseLeave"/>
+                <Label Name="s0" Grid.Row="1" Grid.Column="2" Style="{StaticResource lblWords}"
+                           Grid.ColumnSpan="2" MouseEnter="txt0_MouseEnter" MouseLeave="txt0_MouseLeave"/>
+                <Label Name="s1" Grid.Row="2" Grid.Column="2" Style="{StaticResource lblWords}"
+                           Grid.ColumnSpan="2" MouseEnter="txt1_MouseEnter" MouseLeave="txt1_MouseLeave"/>
+                <Label Name="s2" Grid.Row="3" Grid.Column="2" Style="{StaticResource lblWords}"
+                           Grid.ColumnSpan="2" MouseEnter="txt2_MouseEnter" MouseLeave="txt2_MouseLeave"/>
+                <Label Name="s3" Grid.Row="4" Grid.Column="2" Style="{StaticResource lblWords}"
+                           Grid.ColumnSpan="2" MouseEnter="txt3_MouseEnter" MouseLeave="txt3_MouseLeave"/>
+                <Label Name="s4" Grid.Row="5" Grid.Column="2" Style="{StaticResource lblWords}"
+                           Grid.ColumnSpan="2" MouseEnter="txt4_MouseEnter" MouseLeave="txt4_MouseLeave"/>
+                <Label Name="s5" Grid.Row="6" Grid.Column="2" Style="{StaticResource lblWords}"
+                           Grid.ColumnSpan="2" MouseEnter="txt5_MouseEnter" MouseLeave="txt5_MouseLeave"/>
+                <Button Name="cmdPlay0" Grid.Row="1" Grid.Column="3" Style="{StaticResource playButton}"
+                           MouseEnter="txt0_MouseEnter" MouseLeave="txt0_MouseLeave" Click="cmdPlay0_Click"/>
+                <Button Name="cmdPlay1" Grid.Row="2" Grid.Column="3"  Style="{StaticResource playButton}"
+                           MouseEnter="txt1_MouseEnter" MouseLeave="txt1_MouseLeave" Click="cmdPlay1_Click"/>
+                <Button Name="cmdPlay2" Grid.Row="3" Grid.Column="3"  Style="{StaticResource playButton}"
+                           MouseEnter="txt2_MouseEnter" MouseLeave="txt2_MouseLeave" Click="cmdPlay2_Click"/>
+                <Button Name="cmdPlay3" Grid.Row="4" Grid.Column="3"  Style="{StaticResource playButton}"
+                           MouseEnter="txt3_MouseEnter" MouseLeave="txt3_MouseLeave" Click="cmdPlay3_Click"/>
+                <Button Name="cmdPlay4" Grid.Row="5" Grid.Column="3"  Style="{StaticResource playButton}"
+                           MouseEnter="txt4_MouseEnter" MouseLeave="txt4_MouseLeave" Click="cmdPlay4_Click"/>
+                <Button Name="cmdPlay5" Grid.Row="6" Grid.Column="3"  Style="{StaticResource playButton}"
+                           MouseEnter="txt5_MouseEnter" MouseLeave="txt5_MouseLeave" Click="cmdPlay5_Click"/>
+            </Grid>
+            <UniformGrid Grid.Column="2"  Columns="15" Rows="15" Width="750" Height="750" Grid.RowSpan="3" Name="gridBoard"  
+                Background="#a7bdd4" MouseRightButtonDown="canvas_MouseRightButtonDown" MouseLeftButtonUp="canvas_PreviewMouseLeftButtonUp">
+                <!-- Row 1 -->
+                <Rectangle Fill="{StaticResource tw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tw}"/>
+
+                <!-- Row 2 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 3 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 4 -->
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+
+                <!-- Row 5 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 6 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 7 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 8 -->
+                <Rectangle Fill="{StaticResource tw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource star}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tw}"/>
+
+                <!-- Row 9 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 10 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 11 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 12 -->
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+
+                <!-- Row 13 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 14 -->
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+
+                <!-- Row 15 -->
+                <Rectangle Fill="{StaticResource tw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tw}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource dl}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource square}"/>
+                <Rectangle Fill="{StaticResource tw}"/>
+
+            </UniformGrid>
+            <snot:DragCanvasX x:Name="canvas" Grid.ColumnSpan="2" Background="Transparent"
+                            PreviewMouseLeftButtonUp="canvas_PreviewMouseLeftButtonUp"
+                              MouseRightButtonDown="canvas_MouseRightButtonDown">
+            </snot:DragCanvasX>
+            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                <Button Width="100" Height="50" Name="cmdSave" Style="{StaticResource roundButton}"
+                        Margin="2,2,2,2" Click="cmdSave_Click" Focusable="False">Save</Button>
+                <Button Width="100" Height="50" Name="cmdLoad" Style="{StaticResource roundButton}"
+                        Margin="2,2,2,2" Click="cmdLoad_Click" Focusable="False">Load</Button>
+                <Button Width="100" Height="50" Name="cmdNewGame" Style="{StaticResource roundButton}"
+                        Margin="2,2,2,2" Click="cmdNewGame_Click" Focusable="False">New Game</Button>
+                <Rectangle Width="131"/>
+                <Button Width="50" Height="50" Name="cmdAbout" Style="{StaticResource roundButton}" Margin="2,2,2,2" Click="cmdAbout_Click" Focusable="False">?</Button>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>

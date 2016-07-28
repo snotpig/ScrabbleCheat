@@ -1,0 +1,176 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <VisualBrush x:Key="square">
+        <VisualBrush.Visual>
+            <Canvas Height="50" Width="50" Background="#b0e0cd">
+                <Rectangle Canvas.Left="2" Canvas.Top="2" Width="46" Height="46">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#205000" Offset="0"></GradientStop>
+                            <GradientStop Color="#306010" Offset="0.5"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Canvas.Left="7" Canvas.Top="7" Width="41" Height="41" >
+                    <Rectangle.Fill>
+                        <LinearGradientBrush  StartPoint="0,0" EndPoint="1,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Offset="0" Color="#206010"/>
+                                <GradientStop Offset="1" Color="#308020"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="dl">
+        <VisualBrush.Visual>
+            <Canvas Height="50" Width="50" Background="#a7bdd4">
+                <Rectangle Fill="#d3dde7" Canvas.Left="1" Canvas.Top="1" Width="48" Height="48"/>
+                <Rectangle Canvas.Left="2" Canvas.Top="2" Width="46" Height="46">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#87b3d4" Offset="0"></GradientStop>
+                            <GradientStop Color="#90bede" Offset="0.5"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Canvas.Left="6" Canvas.Top="6" Width="41" Height="41">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#97c5e6" Offset="0"></GradientStop>
+                            <GradientStop Color="#9eccfd" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock Canvas.Left="12.5" Canvas.Top="7.0" Foreground="Black" 
+                           FontSize="20" FontFamily="Corbel" FontWeight="Bold">DL
+                    <TextBlock.RenderTransform>
+                        <ScaleTransform ScaleY="1.4"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="tl">
+        <VisualBrush.Visual>
+            <Canvas Height="50" Width="50" Background="#a7bdd4">
+                <Rectangle Fill="#d3dde7" Canvas.Left="1" Canvas.Top="1" Width="48" Height="48"/>
+                <Rectangle Canvas.Left="2" Canvas.Top="2" Width="46" Height="46">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#0372bd" Offset="0"></GradientStop>
+                            <GradientStop Color="#0485cb" Offset="0.5"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Canvas.Left="6" Canvas.Top="6" Width="41" Height="41">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#0090cd" Offset="0"></GradientStop>
+                            <GradientStop Color="#0797d4" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock Canvas.Left="13.5" Canvas.Top="7.0" Foreground="Black" 
+                           FontSize="20" FontFamily="Corbel" FontWeight="Bold">TL
+                    <TextBlock.RenderTransform>
+                        <ScaleTransform ScaleY="1.4"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="dw">
+        <VisualBrush.Visual>
+            <Canvas Height="50" Width="50" Background="#a7bdd4">
+                <Rectangle Fill="#d3dde7" Canvas.Left="1" Canvas.Top="1" Width="48" Height="48"/>
+                <Rectangle Canvas.Left="2" Canvas.Top="2" Width="46" Height="46">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#d1a051" Offset="0"></GradientStop>
+                            <GradientStop Color="#d9a859" Offset="0.4"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Canvas.Left="6" Canvas.Top="6" Width="41" Height="41">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#e2b462" Offset="0"></GradientStop>
+                            <GradientStop Color="#f2c472" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock Canvas.Left="8.5" Canvas.Top="7.0" Foreground="Black" 
+                           FontSize="20" FontFamily="Corbel" FontWeight="Bold">DW
+                    <TextBlock.RenderTransform>
+                        <ScaleTransform ScaleY="1.4"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="tw">
+        <VisualBrush.Visual>
+            <Canvas Height="50" Width="50" Background="#a7bdd4">
+                <Rectangle Fill="#d3dde7" Canvas.Left="1" Canvas.Top="1" Width="48" Height="48"/>
+                <Rectangle Canvas.Left="2" Canvas.Top="2" Width="46" Height="46">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#c00000" Offset="0"></GradientStop>
+                            <GradientStop Color="#d01010" Offset="0.5"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Canvas.Left="6" Canvas.Top="6" Width="41" Height="41">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#f00010" Offset="0"></GradientStop>
+                            <GradientStop Color="#ff0020" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock Canvas.Left="10.5" Canvas.Top="7.0" Foreground="Black" 
+                           FontSize="20" FontFamily="Corbel" FontWeight="Bold">TW
+                    <TextBlock.RenderTransform>
+                        <ScaleTransform ScaleY="1.4"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <VisualBrush x:Key="star">
+        <VisualBrush.Visual>
+            <Canvas Height="50" Width="50" Background="#a7bdd4">
+                <Rectangle Fill="#d3dde7" Canvas.Left="1" Canvas.Top="1" Width="48" Height="48"/>
+                <Rectangle Canvas.Left="2" Canvas.Top="2" Width="46" Height="46">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#d1a051" Offset="0"></GradientStop>
+                            <GradientStop Color="#d9a859" Offset="0.4"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Canvas.Left="6" Canvas.Top="6" Width="41" Height="41">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                            <GradientStop Color="#e2b462" Offset="0"></GradientStop>
+                            <GradientStop Color="#f2c472" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Polygon Canvas.Left="11.5" Canvas.Top="-2.5" Fill="DarkGoldenrod" FillRule="Nonzero"
+                         Points="3,40 13.6,14 22,40 0,24 27,24"/>
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+
+</ResourceDictionary>
